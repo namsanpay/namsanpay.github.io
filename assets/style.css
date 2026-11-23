@@ -258,3 +258,11 @@ td+td{color:var(--muted)}
   #workplace .t-type{font-weight:700;color:var(--ink)}
   #workplace .t-dur{font-size:14px;color:var(--blue)}
 }
+.wi-teaser{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;background:var(--blue-tint);border:1px solid #D5DFEC;border-left:5px solid var(--blue);border-radius:10px;padding:32px 36px}
+.wi-teaser>div{flex:1 1 520px}
+.wi-teaser h2{margin:4px 0 10px;font-size:26px;line-height:1.35}
+.wi-teaser p{margin:0;color:var(--muted)}
+.wi-points{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px}
+.wi-points li{background:#fff;border:1px solid #D5DFEC;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;color:var(--blue-dark)}
+@media (max-width:720px){.wi-teaser{padding:24px 20px}.wi-teaser h2{font-size:21px}.wi-teaser .btn{width:100%}}
+.page-head+#workplace{padding-top:16px}
