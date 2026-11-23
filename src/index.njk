@@ -280,9 +280,10 @@ layout: base.njk
     <div class="form form-placeholder">
       <strong>전화나 이메일로 문의해 주십시오</strong>
       <p>회사명, 근로자 수, 현재 급여 처리 방식을 알려 주시면 견적을 안내해 드립니다.</p>
+      <p class="mail-hint">메일 프로그램이 열리지 않으면 주소가 자동으로 복사되니, 쓰시는 메일에 붙여 넣어 보내 주십시오.</p>
       <div class="placeholder-actions">
         {% if site.phone %}<a class="btn btn-primary" href="tel:{{ site.phone.split('~')[0] }}">전화 {{ site.phone }}</a>{% endif %}
-        {% if site.email %}<a class="btn btn-ghost" href="mailto:{{ site.email }}?subject=%EA%B8%89%EC%97%AC%20%EC%95%84%EC%9B%83%EC%86%8C%EC%8B%B1%20%EA%B2%AC%EC%A0%81%20%EB%AC%B8%EC%9D%98">이메일 보내기</a>{% endif %}
+        {% if site.email %}<a class="btn btn-ghost" href="mailto:{{ site.email }}?subject=%EA%B8%89%EC%97%AC%20%EC%95%84%EC%9B%83%EC%86%8C%EC%8B%B1%20%EA%B2%AC%EC%A0%81%20%EB%AC%B8%EC%9D%98">이메일 {{ site.email }}</a>{% endif %}
       </div>
     </div>
     {% endif %}
