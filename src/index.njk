@@ -179,14 +179,19 @@ layout: base.njk
 </section>
 
 <section id="clients" class="wrap section">
-  <p class="eyebrow">고객사</p>
-  <h2>업종별 급여 아웃소싱 고객사</h2>
-  <p class="section-lead">제조업부터 병의원, 프랜차이즈 가맹점까지 다양한 업종의 급여·4대보험 업무를 맡고 있습니다. ({{ site.industriesAsOf }} 기준)</p>
-  <ul class="industries">
-    {% for i in site.industries %}
-    <li><strong>{{ i.name }}</strong><span class="ind-count">{{ i.count }}곳</span>{% if i.note %}<span class="ind-note">{{ i.note }}</span>{% endif %}</li>
+  <p class="eyebrow">업종별 관리</p>
+  <h2>{{ sectors.title }}</h2>
+  <p class="section-lead">{{ sectors.lead }}</p>
+  <div class="sectors">
+    {% for i in sectors.items %}
+    <article class="sector{% if i.featured %} sector-featured{% endif %}">
+      <p class="sector-name">{{ loop.index }}. {{ i.name }} <span>{{ i.sub }}</span></p>
+      <h3>{{ i.head }}</h3>
+      <p>{{ i.body }}</p>
+      {% if i.note %}<p class="sector-note">{{ i.note }}</p>{% endif %}
+    </article>
     {% endfor %}
-  </ul>
+  </div>
 </section>
 
 <section id="faq" class="wrap section">

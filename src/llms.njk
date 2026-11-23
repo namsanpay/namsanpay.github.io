@@ -22,8 +22,8 @@ eleventyExcludeFromCollections: true
 - {{ site.pricing.negotiateFrom }}인 이상: 별도 협의
 - 원천징수·연말정산 신고 위임(선택): 1개 1인당 {{ site.pricing.taxOne | won }}, 동시 1인당 {{ site.pricing.taxBoth | won }}
 
-## 고객사 업종 ({{ site.industriesAsOf }} 기준)
-{% for i in site.industries %}- {{ i.name }}: {{ i.count }}곳
+## 업종별 관리
+{% for i in sectors.items %}- {{ i.name }}({{ i.sub }}): {{ i.head }}
 {% endfor %}
 ## 연락처
 - 전화: {{ site.phone }} / 이메일: {{ site.email }}
