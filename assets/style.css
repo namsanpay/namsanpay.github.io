@@ -244,3 +244,4 @@ td+td{color:var(--muted)}
 @media (max-width:720px){.consult-box{padding:24px 20px}.consult-box .btn{width:100%}#workplace .table-box th[scope="row"]{white-space:normal;width:96px}}
 #workplace .table-box{margin-top:20px}
 .consult-box a:not(.btn){color:#fff}
+#workplace .table-box td[rowspan]{vertical-align:middle;font-weight:700;background:var(--blue-tint)}
