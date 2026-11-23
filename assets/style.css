@@ -242,3 +242,5 @@ td+td{color:var(--muted)}
 .consult-box .consult-name{color:#fff;font-size:20px;font-weight:700;margin:0 0 10px}
 .consult-box .btn{white-space:normal;text-align:center}
 @media (max-width:720px){.consult-box{padding:24px 20px}.consult-box .btn{width:100%}#workplace .table-box th[scope="row"]{white-space:normal;width:96px}}
+#workplace .table-box{margin-top:20px}
+.consult-box a:not(.btn){color:#fff}
