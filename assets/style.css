@@ -192,9 +192,3 @@ td+td{color:var(--muted)}
 .faq details p{margin:0 0 20px;color:var(--muted);font-size:16px}
 @media (max-width:720px){.hero-title{font-size:32px}.calc-row output{margin-left:0;width:100%}}
 .scope{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}@media (max-width:720px){.scope{grid-template-columns:1fr}}
-.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:20px}
-.grid-2 .card h3{font-size:19px}
-.compare th[scope=row]{background:#FAFAF8;font-weight:700;white-space:nowrap}
-.compare .us{background:#EEF2F7;color:var(--ink);font-weight:500}
-.compare thead .us{background:var(--blue);color:#fff}
-@media (max-width:720px){.grid-2{grid-template-columns:1fr}}
