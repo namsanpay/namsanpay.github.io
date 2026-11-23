@@ -42,13 +42,20 @@
   <div class="wrap footer-inner">
     <div class="footer-col">
       <strong>{{ site.name }}</strong>
-      {% for o in site.offices %}{% if o.address %}<span>{{ o.label }} · {{ o.address }}</span>{% endif %}{% endfor %}
-    </div>
-    <div class="footer-col">
       {% if site.ceo %}<span>대표 공인노무사 {{ site.ceo }}</span>{% endif %}
       {% if site.bizNo %}<span>사업자등록번호 {{ site.bizNo }}</span>{% endif %}
-      {% if site.phone %}<span>전화 <a href="tel:{{ site.phone }}">{{ site.phone }}</a></span>{% endif %}
       {% if site.email %}<span>이메일 <a href="mailto:{{ site.email }}">{{ site.email }}</a></span>{% endif %}
+      {% if site.hours %}<span>상담시간 {{ site.hours }}</span>{% endif %}
+    </div>
+    {% for o in site.offices %}{% if o.address %}
+    <div class="footer-col">
+      <strong>{{ o.label }}</strong>
+      <span>{{ o.address }}</span>
+      {% if o.phone %}<span>전화 <a href="tel:{{ o.phone.split('~')[0] }}">{{ o.phone }}</a>{% if o.fax %} · 팩스 {{ o.fax }}{% endif %}</span>{% endif %}
+    </div>
+    {% endif %}{% endfor %}
+    <div class="footer-col">
+      {% if site.mainSite %}<a href="{{ site.mainSite }}">노무법인 남산 홈페이지</a>{% endif %}
       <a href="/privacy/">개인정보처리방침</a>
     </div>
   </div>
