@@ -233,3 +233,12 @@ td+td{color:var(--muted)}
 .sector p.sector-name{color:var(--blue)}
 .sector .sector-note{margin-top:10px;font-size:13px;color:var(--blue)}
 @media (max-width:720px){.sectors{grid-template-columns:1fr}}
+.callout{margin:20px 0 0;padding:16px 20px;background:var(--blue-tint);border-left:4px solid var(--blue);border-radius:6px;font-size:15px;color:var(--blue-dark);font-weight:500}
+#workplace .table-box th[scope="row"]{white-space:nowrap;text-align:left;width:140px}
+.consult-box{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;background:var(--navy);color:var(--on-navy);border-radius:10px;padding:28px 32px}
+.consult-box>div{flex:1 1 420px}
+.consult-box p{margin:0 0 8px;font-size:15px;line-height:1.7}
+.consult-box .consult-role{color:var(--on-navy-2);font-size:14px;margin:0 0 4px}
+.consult-box .consult-name{color:#fff;font-size:20px;font-weight:700;margin:0 0 10px}
+.consult-box .btn{white-space:normal;text-align:center}
+@media (max-width:720px){.consult-box{padding:24px 20px}.consult-box .btn{width:100%}#workplace .table-box th[scope="row"]{white-space:normal;width:96px}}
