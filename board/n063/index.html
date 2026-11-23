@@ -132,5 +132,21 @@ DB형이나 DC형을 운영하고 있다면 퇴직자가 생기는 즉시 퇴직
     </div>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const toast = document.getElementById('toast');
+  let t;
+  const show = (msg) => { toast.textContent = msg; toast.classList.add('on'); clearTimeout(t); t = setTimeout(() => toast.classList.remove('on'), 2600); };
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+    a.addEventListener('click', () => {
+      const addr = a.getAttribute('href').slice(7).split('?')[0];
+      try {
+        navigator.clipboard.writeText(addr).then(() => show(addr + ' 주소가 복사되었습니다'), () => {});
+      } catch (e) {}
+    });
+  });
+})();
+</script>
 </body>
 </html>

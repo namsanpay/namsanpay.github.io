@@ -420,9 +420,10 @@
     <div class="form form-placeholder">
       <strong>전화나 이메일로 문의해 주십시오</strong>
       <p>회사명, 근로자 수, 현재 급여 처리 방식을 알려 주시면 견적을 안내해 드립니다.</p>
+      <p class="mail-hint">메일 프로그램이 열리지 않으면 주소가 자동으로 복사되니, 쓰시는 메일에 붙여 넣어 보내 주십시오.</p>
       <div class="placeholder-actions">
         <a class="btn btn-primary" href="tel:02-585-7747">전화 02-585-7747~8</a>
-        <a class="btn btn-ghost" href="mailto:namsan@namsanhr.com?subject=%EA%B8%89%EC%97%AC%20%EC%95%84%EC%9B%83%EC%86%8C%EC%8B%B1%20%EA%B2%AC%EC%A0%81%20%EB%AC%B8%EC%9D%98">이메일 보내기</a>
+        <a class="btn btn-ghost" href="mailto:namsan@namsanhr.com?subject=%EA%B8%89%EC%97%AC%20%EC%95%84%EC%9B%83%EC%86%8C%EC%8B%B1%20%EA%B2%AC%EC%A0%81%20%EB%AC%B8%EC%9D%98">이메일 namsan@namsanhr.com</a>
       </div>
     </div>
     
@@ -477,5 +478,21 @@
     </div>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const toast = document.getElementById('toast');
+  let t;
+  const show = (msg) => { toast.textContent = msg; toast.classList.add('on'); clearTimeout(t); t = setTimeout(() => toast.classList.remove('on'), 2600); };
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+    a.addEventListener('click', () => {
+      const addr = a.getAttribute('href').slice(7).split('?')[0];
+      try {
+        navigator.clipboard.writeText(addr).then(() => show(addr + ' 주소가 복사되었습니다'), () => {});
+      } catch (e) {}
+    });
+  });
+})();
+</script>
 </body>
 </html>
