@@ -219,7 +219,7 @@ td+td{color:var(--muted)}
 .prose th,.prose td{border:1px solid #dde2ea;padding:8px 10px;text-align:left;vertical-align:top}
 .prose th{background:#f4f6f9;font-weight:600;white-space:nowrap}
 .prose li{margin:0 0 6px}
-.brand-logo{display:block;height:40px;width:auto}
+.brand-logo{display:block;height:34px;width:auto}
 .brand .brand-sub{font-size:13px;color:var(--muted);padding-left:12px;border-left:1px solid var(--line);line-height:1.3}
 .footer-logo{display:block;height:52px;width:auto;margin:0 0 12px;align-self:flex-start}
-@media (max-width:560px){.brand .brand-sub{display:none}.brand-logo{height:34px}}
+@media (max-width:560px){.brand .brand-sub{display:none}.brand-logo{height:30px}}
