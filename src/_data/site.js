@@ -53,6 +53,6 @@ export default {
   privacyRetention: "", // 문의 정보 보유기간. 예: "문의 처리 완료 후 1년"
 
   // 검색엔진 소유 확인 코드 (네이버 서치어드바이저 / 구글 서치콘솔에서 발급받아 넣음)
-  naverVerification: "",
+  naverVerification: "f7b880f42663430b98f58b3fad511b33f91e2d9f",
   googleVerification: "",
 };
