@@ -3,7 +3,7 @@ export default {
   name: "노무법인 남산",
   service: "급여·4대보험 아웃소싱",
   // 실제 주소가 정해지면 바꿉니다. 예: "https://payroll.namsan.co.kr"
-  url: "https://namsanpay.github.io",
+  url: "https://namsanpay.com",
   description:
     "노무법인 남산의 급여·4대보험 아웃소싱. 급여 계산, 4대보험 신고, 퇴직금 산정을 공인노무사가 노동법 기준으로 검토하며 처리합니다.",
 

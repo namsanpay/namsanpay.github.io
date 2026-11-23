@@ -1,5 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.ignores.add("src/posts/_*.md");
   eleventyConfig.addFilter("head", (arr, n) => (arr || []).slice(0, n));
 
