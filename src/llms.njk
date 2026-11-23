@@ -32,6 +32,7 @@ eleventyExcludeFromCollections: true
 - 담당: {{ site.workplace.name }} (전화 {{ site.workplace.phone }}, 이메일 {{ site.workplace.email }})
 
 ## 연락처
+- 급여아웃소싱 상담: {{ site.payrollTeam.lead }} / 급여 담당: {{ site.payrollTeam.members | join(", ") }}
 - 전화: {{ site.phone }} / 이메일: {{ site.email }}
 {% for o in site.offices %}- {{ o.label }}: {{ o.address }} (전화 {{ o.phone }})
 {% endfor %}- 노무법인 남산 홈페이지: {{ site.mainSite }}
