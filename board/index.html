@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>칼럼·업무사례 | 노무법인 남산</title>
+<meta name="description" content="급여·4대보험 실무에서 자주 묻는 내용과 노무법인 남산이 처리한 사례를 정리합니다.">
+<link rel="canonical" href="https://namsanpay.github.io/board/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="노무법인 남산">
+<meta property="og:title" content="칼럼·업무사례 | 노무법인 남산">
+<meta property="og:description" content="급여·4대보험 실무에서 자주 묻는 내용과 노무법인 남산이 처리한 사례를 정리합니다.">
+<meta property="og:url" content="https://namsanpay.github.io/board/">
+<meta property="og:locale" content="ko_KR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+
+</head>
+<body>
+<a class="skip" href="#content">본문 바로가기</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/"><span class="brand-name">노무법인 남산</span><span class="brand-sub">급여·4대보험 아웃소싱</span></a>
+    <nav aria-label="주요 메뉴" class="nav">
+      <a href="/#why">왜 노무법인인가</a>
+      <a href="/#scope">업무 범위</a>
+      <a href="/#process">진행 절차</a>
+      <a href="/#price">비용 안내</a>
+      <a href="/board/" aria-current="page">칼럼·업무사례</a>
+      <a class="btn btn-primary btn-sm" href="/#contact">견적 문의</a>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<section class="wrap page-head">
+  <h1>칼럼·업무사례</h1>
+  <p>급여·4대보험 실무에서 자주 묻는 내용과 노무법인 남산이 처리한 사례를 정리합니다.</p>
+</section>
+
+<section class="wrap section-last">
+  <div class="tabs" role="group" aria-label="분류">
+    <button type="button" class="tab" aria-pressed="true" data-cat="">전체</button>
+    <button type="button" class="tab" aria-pressed="false" data-cat="급여 실무">급여 실무</button><button type="button" class="tab" aria-pressed="false" data-cat="4대보험">4대보험</button><button type="button" class="tab" aria-pressed="false" data-cat="업무사례">업무사례</button><button type="button" class="tab" aria-pressed="false" data-cat="공지">공지</button>
+  </div>
+  <ul class="post-list">
+    
+    <li data-cat="공지">
+      <a href="/board/opening-notice/">
+        <span class="cat">공지</span>
+        <span class="post-title">급여·4대보험 아웃소싱 안내 페이지를 열었습니다</span>
+        <time datetime="2026-11-23T00:00:00.000Z">2026.11.23</time>
+      </a>
+    </li>
+    
+  </ul>
+  <p class="empty" hidden>등록된 글이 없습니다.</p>
+</section>
+
+<script>
+(() => {
+  const tabs = document.querySelectorAll('.tab');
+  const items = document.querySelectorAll('.post-list li');
+  const empty = document.querySelector('.empty');
+  function apply(cat) {
+    let n = 0;
+    items.forEach((li) => { const show = !cat || li.dataset.cat === cat; li.hidden = !show; if (show) n++; });
+    empty.hidden = n > 0;
+    tabs.forEach((t) => t.setAttribute('aria-pressed', String(t.dataset.cat === cat)));
+  }
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    const cat = t.dataset.cat;
+    history.replaceState(null, '', cat ? '?cat=' + encodeURIComponent(cat) : location.pathname);
+    apply(cat);
+  }));
+  const q = new URLSearchParams(location.search).get('cat');
+  if (q) apply(q);
+})();
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <strong>노무법인 남산</strong>
+      <span>서울 본사 · 서울특별시 중구 장교동</span>
+    </div>
+    <div class="footer-col">
+      
+      
+      
+      
+      <a href="/privacy/">개인정보처리방침</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
