@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://namsanpay.github.io/sitemap.xml
+Sitemap: https://namsanpay.com/sitemap.xml
