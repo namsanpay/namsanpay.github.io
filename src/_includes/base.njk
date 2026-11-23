@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% set pageTitle = (title + " | " + site.name) if title else (site.name + " " + site.service) %}
+{% set pageDesc = description or site.description %}
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDesc }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="{{ 'article' if layout == 'post.njk' else 'website' }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDesc }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:locale" content="ko_KR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#content">본문 바로가기</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/"><span class="brand-name">{{ site.name }}</span><span class="brand-sub">{{ site.service }}</span></a>
+    <nav aria-label="주요 메뉴" class="nav">
+      <a href="/#why">왜 노무법인인가</a>
+      <a href="/#scope">업무 범위</a>
+      <a href="/#process">진행 절차</a>
+      <a href="/#price">비용 안내</a>
+      <a href="/board/"{% if page.url.startsWith('/board/') %} aria-current="page"{% endif %}>칼럼·업무사례</a>
+      <a class="btn btn-primary btn-sm" href="/#contact">견적 문의</a>
+    </nav>
+  </div>
+</header>
+<main id="content">
+{{ content | safe }}
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <strong>{{ site.name }}</strong>
+      {% for o in site.offices %}{% if o.address %}<span>{{ o.label }} · {{ o.address }}</span>{% endif %}{% endfor %}
+    </div>
+    <div class="footer-col">
+      {% if site.ceo %}<span>대표 공인노무사 {{ site.ceo }}</span>{% endif %}
+      {% if site.bizNo %}<span>사업자등록번호 {{ site.bizNo }}</span>{% endif %}
+      {% if site.phone %}<span>전화 <a href="tel:{{ site.phone }}">{{ site.phone }}</a></span>{% endif %}
+      {% if site.email %}<span>이메일 <a href="mailto:{{ site.email }}">{{ site.email }}</a></span>{% endif %}
+      <a href="/privacy/">개인정보처리방침</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

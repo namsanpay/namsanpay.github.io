@@ -1,0 +1,40 @@
+---
+layout: base.njk
+---
+{% set pn = collections.posts | prevNext(page.url) %}
+<article class="article">
+  <a class="back" href="/board/">← 목록으로</a>
+  <p><a class="cat" href="/board/?cat={{ category | urlencode }}">{{ category }}</a></p>
+  <h1>{{ title }}</h1>
+  <p class="meta"><time datetime="{{ page.date | iso }}">{{ page.date | ymd }}</time>{% if author %} · {{ author }}{% endif %}</p>
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+
+  <aside class="cta">
+    <div>
+      <strong>급여·4대보험 업무, 노무법인에 맡기십시오</strong>
+      <span>인원 규모를 알려 주시면 견적을 안내해 드립니다.</span>
+    </div>
+    <a class="btn btn-light" href="/#contact">견적 문의하기</a>
+  </aside>
+
+  {% if pn.older or pn.newer %}
+  <nav class="prev-next" aria-label="이전·다음 글">
+    {% if pn.older %}<a href="{{ pn.older.url }}"><span>이전 글</span>{{ pn.older.data.title }}</a>{% endif %}
+    {% if pn.newer %}<a href="{{ pn.newer.url }}"><span>다음 글</span>{{ pn.newer.data.title }}</a>{% endif %}
+  </nav>
+  {% endif %}
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ title | dump | safe }},
+  "datePublished": "{{ page.date | iso }}",
+  "author": { "@type": "Organization", "name": "{{ site.name }}" },
+  "publisher": { "@type": "Organization", "name": "{{ site.name }}" },
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+}
+</script>

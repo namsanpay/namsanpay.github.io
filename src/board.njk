@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: 칼럼·업무사례
+description: 급여·4대보험 실무에서 자주 묻는 내용과 노무법인 남산이 처리한 사례를 정리합니다.
+permalink: /board/
+---
+<section class="wrap page-head">
+  <h1>칼럼·업무사례</h1>
+  <p>급여·4대보험 실무에서 자주 묻는 내용과 노무법인 남산이 처리한 사례를 정리합니다.</p>
+</section>
+
+<section class="wrap section-last">
+  <div class="tabs" role="group" aria-label="분류">
+    <button type="button" class="tab" aria-pressed="true" data-cat="">전체</button>
+    {% for c in site.categories %}<button type="button" class="tab" aria-pressed="false" data-cat="{{ c }}">{{ c }}</button>{% endfor %}
+  </div>
+  <ul class="post-list">
+    {% for post in collections.posts %}
+    <li data-cat="{{ post.data.category }}">
+      <a href="{{ post.url }}">
+        <span class="cat">{{ post.data.category }}</span>
+        <span class="post-title">{{ post.data.title }}</span>
+        <time datetime="{{ post.date | iso }}">{{ post.date | ymd }}</time>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="empty" {% if collections.posts.length %}hidden{% endif %}>등록된 글이 없습니다.</p>
+</section>
+
+<script>
+(() => {
+  const tabs = document.querySelectorAll('.tab');
+  const items = document.querySelectorAll('.post-list li');
+  const empty = document.querySelector('.empty');
+  function apply(cat) {
+    let n = 0;
+    items.forEach((li) => { const show = !cat || li.dataset.cat === cat; li.hidden = !show; if (show) n++; });
+    empty.hidden = n > 0;
+    tabs.forEach((t) => t.setAttribute('aria-pressed', String(t.dataset.cat === cat)));
+  }
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    const cat = t.dataset.cat;
+    history.replaceState(null, '', cat ? '?cat=' + encodeURIComponent(cat) : location.pathname);
+    apply(cat);
+  }));
+  const q = new URLSearchParams(location.search).get('cat');
+  if (q) apply(q);
+})();
+</script>
