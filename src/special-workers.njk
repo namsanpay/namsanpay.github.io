@@ -4,10 +4,11 @@ title: 택배기사·캐디 등 노무제공자 산재·고용보험 신고
 description: 쿠팡CLS 배송 협력사 등 택배 대리점과 골프장의 택배기사·캐디 등 노무제공자(특수형태근로종사자) 산재보험·고용보험 신고를 노무법인 남산이 전문으로 처리합니다.
 permalink: /special-workers/
 ---
+<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"FAQPage","mainEntity": swFaqSchema} | dump | safe }}</script>
 <section class="wrap page-head">
   <p class="eyebrow">노무제공자(특고) 산재·고용보험 신고</p>
   <h1>택배기사·캐디 등 노무제공자<br>산재·고용보험 신고, 남산이 전문으로 합니다.</h1>
-  <p>택배 대리점과 골프장은 매달 노무제공자의 보수가 바뀌고, 산재보험과 고용보험의 신고 방식도 서로 다릅니다. 한 번 놓친 신고는 과태료와 보험료 추징으로 돌아옵니다. 노무법인 남산은 쿠팡CLS 배송 협력사를 비롯한 택배 대리점과 골프장의 노무제공자 신고를 맡고 있습니다.</p>
+  <p>택배 대리점과 골프장은 매달 노무제공자의 보수가 바뀌고, 산재보험과 고용보험의 신고 방식도 서로 다릅니다. 한 번 놓친 신고는 과태료와 보험료 추징으로 돌아옵니다. 노무법인 남산은 근로복지공단 보험사무대행기관으로, 쿠팡CLS 배송 협력사를 비롯한 택배 대리점과 골프장의 노무제공자 신고를 맡고 있습니다.</p>
 </section>
 
 <section class="wrap section">
@@ -16,6 +17,35 @@ permalink: /special-workers/
     <li><span class="step-no">골프장</span><strong>골프장 캐디</strong><span>골프장 캐디의 산재보험·고용보험 신고와 보수 관리를 맡습니다. 입·퇴사가 잦은 시즌에도 신고 누락이 없도록 관리합니다.</span></li>
     <li><span class="step-no">기타</span><strong>그 밖의 노무제공자</strong><span>화물차주, 보험설계사, 방문판매원 등 산재·고용보험 적용 직종의 노무제공자 신고도 처리합니다.</span></li>
   </ol>
+</section>
+
+<section class="wrap section">
+  <h2>산재보험과 고용보험, 기준이 다릅니다</h2>
+  <p class="section-lead">노무제공자 보험은 근로자 4대보험과 다르고, 같은 노무제공자라도 산재보험과 고용보험의 적용 기준과 신고 방식이 다릅니다.</p>
+  <div class="table-box">
+    <table>
+      <thead><tr><th scope="col">구분</th><th scope="col">산재보험</th><th scope="col">고용보험</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">적용 제외</th><td>소득·나이에 따른 적용 제외가 없습니다. 월 보수가 적거나 65세 이후 계약한 사람도 적용됩니다.</td><td>월 보수 80만 원 미만, 65세 이후 새로 계약한 사람 등은 제외됩니다. 둘 이상 계약의 보수를 합해 80만 원 이상이면 본인 신청으로 가입할 수 있습니다.</td></tr>
+        <tr><th scope="row">사업주 신고</th><td>2023년 7월부터 입·이직 신고 대신 매월 월 보수액 신고</td><td>피보험자격 취득·상실 신고와 월 보수액 신고</td></tr>
+        <tr><th scope="row">보험료 부담</th><td>사업주와 노무제공자가 절반씩</td><td>사업주와 노무제공자가 절반씩</td></tr>
+        <tr><th scope="row">신고 누락 시</th><td>100만 원 이하 과태료, 보험료 소급 부과</td><td>300만 원 이하 과태료, 보험료 소급 부과</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">보험료율과 공제 기준은 해마다 바뀔 수 있어 매월 처리 시점의 기준을 확인해 적용합니다.</p>
+</section>
+
+<section class="wrap section">
+  <h2>대리점·골프장이 자주 묻는 질문</h2>
+  <div class="faq">
+    {% for f in swFaq %}
+    <details{% if loop.first %} open{% endif %}>
+      <summary><h3>{{ f.q }}</h3></summary>
+      <p>{{ f.a }}</p>
+    </details>
+    {% endfor %}
+  </div>
 </section>
 
 <section class="wrap section">
