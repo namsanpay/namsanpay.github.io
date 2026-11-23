@@ -11,7 +11,7 @@ export default {
   phone: "02-585-7747~8",
   email: "namsan@namsanhr.com",
   // 일터혁신 컨설팅 담당 — 박주희 노무사 직통번호·이메일을 받으면 여기만 바꾸면 됨
-  workplace: { name: "박주희 공인노무사", phone: "02-585-7747~8", email: "namsan@namsanhr.com" },
+  workplace: { name: "박주희 공인노무사", phone: "02-585-7747~8", email: "jh.park@namsanhr.com" },
   fax: "02-585-7743",
   hours: "평일 09:00 – 18:00 (점심 12:00 – 13:00)",
   mainSite: "https://www.namsanhr.com",
