@@ -212,3 +212,4 @@ td+td{color:var(--muted)}
 .steps .step-no{letter-spacing:.5px}
 @media (max-width:720px){.hero-sub{font-size:18px}.reasons li{flex-direction:column;gap:8px;padding:22px}.closing{padding:32px 22px}.closing h2{font-size:22px}}
 .hero h1.hero-title{color:#fff}
+.prose img{max-width:100%;height:auto;border-radius:8px;margin:8px 0}.prose table{margin:0 0 18px}
