@@ -245,3 +245,16 @@ td+td{color:var(--muted)}
 #workplace .table-box{margin-top:20px}
 .consult-box a:not(.btn){color:#fff}
 #workplace .table-box td[rowspan]{vertical-align:middle;font-weight:700;background:var(--blue-tint)}
+@media (max-width:720px){
+  #workplace table{min-width:0;font-size:15px}
+  #workplace thead{display:none}
+  #workplace table,#workplace tbody,#workplace tr,#workplace td,#workplace th[scope="row"]{display:block;width:100%}
+  #workplace tr{border-top:1px solid var(--line);padding:14px 18px}
+  #workplace tbody tr:first-child{border-top:0}
+  #workplace td,#workplace th[scope="row"]{border:0;padding:0;background:none}
+  #workplace td[rowspan]{display:block;margin:-14px -18px 12px;padding:10px 18px;width:auto;background:var(--blue-tint);color:var(--blue-dark)}
+  #workplace td+td{margin-top:4px}
+  #workplace th[scope="row"]{font-weight:700;color:var(--ink);margin-bottom:4px}
+  #workplace .t-type{font-weight:700;color:var(--ink)}
+  #workplace .t-dur{font-size:14px;color:var(--blue)}
+}
