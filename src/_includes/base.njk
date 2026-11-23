@@ -17,6 +17,13 @@
 <meta property="og:description" content="{{ pageDesc }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="{{ site.url }}/assets/brand/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/brand/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -27,7 +34,7 @@
 <a class="skip" href="#content">본문 바로가기</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="/"><span class="brand-name">{{ site.name }}</span><span class="brand-sub">{{ site.service }}</span></a>
+    <a class="brand" href="/" aria-label="{{ site.brand }} 홈"><img class="brand-logo" src="/assets/brand/logo-header.svg" alt="{{ site.brand }}" width="162" height="40"><span class="brand-sub">급여아웃소싱 · {{ site.name }}</span></a>
     <nav aria-label="주요 메뉴" class="nav">
       <a href="/#scope">업무 범위</a>
       <a href="/#price">비용</a>
@@ -44,6 +51,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-col">
+      <img class="footer-logo" src="/assets/brand/logo-ko.svg" alt="{{ site.brand }} 급여아웃소싱 전문 · {{ site.name }}" width="222" height="52">
       <strong>{{ site.name }}</strong>
       {% if site.ceo %}<span>대표 공인노무사 {{ site.ceo }}</span>{% endif %}
       {% if site.bizNo %}<span>사업자등록번호 {{ site.bizNo }}</span>{% endif %}

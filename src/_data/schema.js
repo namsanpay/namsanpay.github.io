@@ -11,6 +11,8 @@ const org = {
   name: site.name,
   alternateName: ["남산PAY", "NAMSAN PAY", "노무법인 남산 급여아웃소싱", "Namsan Labor Law Firm"],
   url: `${site.url}/`,
+  logo: `${site.url}/assets/brand/apple-touch-icon.png`,
+  image: `${site.url}/assets/brand/og.png`,
   description: site.description,
   telephone: tel(site.phone),
   email: site.email,
