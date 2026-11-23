@@ -9,7 +9,7 @@ const org = {
   "@type": ["ProfessionalService", "LegalService"],
   "@id": `${site.url}/#org`,
   name: site.name,
-  alternateName: ["노무법인 남산 급여 아웃소싱", "Namsan Labor Law Firm"],
+  alternateName: ["남산PAY", "NAMSAN PAY", "노무법인 남산 급여아웃소싱", "Namsan Labor Law Firm"],
   url: `${site.url}/`,
   description: site.description,
   telephone: tel(site.phone),
@@ -44,7 +44,7 @@ const org = {
     },
   })),
   knowsAbout: [
-    "급여 아웃소싱", "급여대행", "4대보험 신고 대행", "임금명세서", "연차수당 산정",
+    "급여아웃소싱", "급여대행", "급여관리대행", "4대보험 신고 대행", "임금명세서", "연차수당 산정",
     "퇴직금 산정", "통상임금", "노무제공자 고용보험·산재보험", "인사노무 자문",
   ],
 };
@@ -52,7 +52,8 @@ const org = {
 const service = {
   "@type": "Service",
   "@id": `${site.url}/#payroll`,
-  name: "급여 아웃소싱·4대보험 신고 대행",
+  name: "남산PAY 급여아웃소싱·4대보험 신고 대행",
+  alternateName: ["급여아웃소싱", "급여대행", "급여관리대행"],
   serviceType: "급여 아웃소싱",
   provider: { "@id": `${site.url}/#org` },
   areaServed: { "@type": "Country", name: "대한민국" },

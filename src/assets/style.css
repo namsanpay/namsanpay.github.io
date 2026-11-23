@@ -192,3 +192,23 @@ td+td{color:var(--muted)}
 .faq details p{margin:0 0 20px;color:var(--muted);font-size:16px}
 @media (max-width:720px){.hero-title{font-size:32px}.calc-row output{margin-left:0;width:100%}}
 .scope{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}@media (max-width:720px){.scope{grid-template-columns:1fr}}
+
+/* v4 */
+.hero-title{margin:0}
+.hero-sub{margin:0;font-size:22px;font-weight:700;color:#fff}
+.hero-badges{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.hero-badges li{border:1px solid #5C7193;border-radius:20px;padding:6px 14px;font-size:14px;color:var(--on-navy)}
+.prose-block{max-width:860px;font-size:17px;line-height:1.85;color:var(--ink-2)}
+.prose-block p{margin:0 0 14px}
+.reasons{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.reasons li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px 28px;display:flex;gap:22px;align-items:flex-start}
+.reasons .r-no{flex:0 0 auto;font-size:26px;font-weight:800;color:var(--blue);line-height:1.2}
+.reasons h3{margin:0 0 8px;font-size:19px}
+.reasons p{margin:0;font-size:16px;color:var(--muted)}
+.closing{background:var(--blue-tint);border-radius:12px;padding:44px 40px;text-align:center}
+.closing h2{margin:0 0 14px;font-size:28px}
+.closing p{margin:0 auto 10px;max-width:760px;color:var(--muted);font-size:16px}
+.closing-line{font-size:20px !important;font-weight:800;color:var(--blue) !important;margin-top:18px !important}
+.steps .step-no{letter-spacing:.5px}
+@media (max-width:720px){.hero-sub{font-size:18px}.reasons li{flex-direction:column;gap:8px;padding:22px}.closing{padding:32px 22px}.closing h2{font-size:22px}}
+.hero h1.hero-title{color:#fff}
