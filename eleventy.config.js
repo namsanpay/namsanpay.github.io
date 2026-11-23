@@ -2,6 +2,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.ignores.add("src/posts/_*.md");
+  eleventyConfig.addFilter("won", (n) => Number(n).toLocaleString("ko-KR") + "원");
   eleventyConfig.addFilter("head", (arr, n) => (arr || []).slice(0, n));
 
   // 게시글: src/posts 폴더의 .md 파일 (파일명이 _ 로 시작하면 제외)
