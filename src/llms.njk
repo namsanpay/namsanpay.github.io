@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
 - {{ site.pricing.baseUntil }}인 이상 {{ site.pricing.negotiateFrom }}인 미만: 월 {{ site.pricing.base | won }} + {{ site.pricing.baseUntil }}인 초과 1인당 {{ site.pricing.perHead | won }}
 - {{ site.pricing.negotiateFrom }}인 이상: 별도 협의
 - 원천징수·연말정산 신고 위임(선택): 1개 1인당 {{ site.pricing.taxOne | won }}, 동시 1인당 {{ site.pricing.taxBoth | won }}
-- 노무자문·노동사건 대리(노동청 진정·근로감독, 노동위원회 구제신청 등)는 별도 계약. 급여아웃소싱 고객사는 자문료·사건 수임료 우대 보수 적용
+- 인사·노무 자문과 노동사건 대리(노동청 진정·근로감독, 노동위원회 구제신청 등)는 별도 계약. 급여아웃소싱을 함께 맡긴 사업장은 보수 별도 조정
 
 ## 주요 고객 업종과 업종별 급여·4대보험 관리
 {% for i in sectors.items %}- {{ i.name }}({{ i.sub }}): {{ i.head }}
