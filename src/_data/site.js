@@ -11,7 +11,7 @@ export default {
   phone: "02-585-7747~8",
   email: "namsan@namsanhr.com",
   // 급여아웃소싱 상담 담당 — 아웃소싱사 명단(2026-09-26 기준) 담당자. 인원 바뀌면 여기만 수정
-  payrollTeam: { lead: "이슬 팀장", members: ["김경미", "노유선", "안재민", "임지윤", "최다혜", "한아름"] },
+  payrollTeam: { lead: "이슬 팀장", members: ["김경미", "노유선", "안재민", "이기옥", "최다혜", "한아름"] },
   // 일터혁신 컨설팅 담당 — 박주희 노무사 직통번호·이메일을 받으면 여기만 바꾸면 됨
   workplace: { name: "박주희 공인노무사", phone: "010-8423-2272", email: "jh.park@namsanhr.com" },
   fax: "02-585-7743",
