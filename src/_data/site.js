@@ -52,7 +52,7 @@ export default {
     { name: "건설", count: 1, note: "" },
   ],
 
-  categories: ["급여 실무", "4대보험", "노무제공자", "업무사례", "공지"],
+  categories: ["급여 실무", "4대보험", "노무제공자", "공지"],
 
   privacyOfficer: "",   // 개인정보 보호책임자 성명
   privacyRetention: "", // 문의 정보 보유기간. 예: "문의 처리 완료 후 1년"
