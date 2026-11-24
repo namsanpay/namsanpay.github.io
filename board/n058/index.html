@@ -26,6 +26,7 @@
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 
@@ -35,7 +36,8 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="/" aria-label="남산PAY 홈"><img class="brand-logo" src="/assets/brand/logo-header.svg" alt="남산PAY" width="282" height="44"><span class="brand-sub">급여아웃소싱 · 노무법인 남산</span></a>
-    <nav aria-label="주요 메뉴" class="nav">
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    <nav aria-label="주요 메뉴" class="nav" id="site-nav">
       <a href="/#scope">업무 범위</a>
       <a href="/#price">비용</a>
       <a href="/#clients">주요 고객 업종</a>
@@ -179,6 +181,13 @@
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
+(() => {
+  const btn = document.querySelector('.menu-btn'), nav = document.getElementById('site-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', () => { const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open); btn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기'); });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }));
+  }
+})();
 (() => {
   const toast = document.getElementById('toast');
   let t;

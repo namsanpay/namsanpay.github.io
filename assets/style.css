@@ -274,3 +274,59 @@ td+td{color:var(--muted)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:8px;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50;max-width:calc(100% - 32px)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 .table-box th[scope="row"]{white-space:nowrap;text-align:left}@media (max-width:720px){.table-box th[scope="row"]{white-space:normal}}
+
+/* ===== 2026-11-24 노무법인 남산 본사 홈페이지 톤 맞춤 ===== */
+:root{
+  --ink:#111418; --ink-2:#262B33; --muted:#5A6170; --muted-2:#6B7280;
+  --bg:#FFFFFF; --surface:#FFFFFF; --line:#E2E7EE; --line-2:#EEF1F5;
+  --navy:#04306F; --blue:#0A5BD3; --blue-dark:#06419A; --blue-tint:#E3EDFD;
+  --on-navy:#DCE7F7; --on-navy-2:#B9CDEB;
+}
+body{font-family:'Pretendard Variable',Pretendard,'Noto Sans KR',system-ui,-apple-system,sans-serif;letter-spacing:-.01em}
+h1,h2,.page-head h1,.article h1{letter-spacing:-.03em}
+h2{font-size:36px;font-weight:800}
+.site-header{border-bottom:1px solid var(--line-2)}
+.nav a{font-weight:600}
+.btn{border-radius:999px;padding:13px 28px}
+.nav a.btn{padding:10px 22px}
+.btn-outline{border-color:rgba(255,255,255,.6)}
+/* 첫 화면: 본사 '급여·4대보험 아웃소싱' 영역과 같은 파란 그라데이션 */
+.hero{background:linear-gradient(135deg,#0047B8 0%,#0A5BD3 45%,#7FAEF0 100%)}
+.hero h1,.hero .hero-title{color:#fff}
+.hero-kicker{color:#DCE8FF}
+.hero-sub{color:#fff}
+.hero-lead{color:#EAF1FD}
+.hero-badges li{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.08)}
+/* 소제목 꼬리표: 본사 '5. 급여아웃소싱' 같은 연한 파란 칩 */
+.eyebrow{display:inline-block;background:#D6E5FD;color:var(--blue);padding:6px 14px;border-radius:10px;font-size:15px;font-weight:700;margin:0 0 14px}
+.eyebrow-light{background:rgba(255,255,255,.16);color:#fff}
+.wi-teaser .eyebrow{background:#fff}
+/* 카드·표 */
+.card,.steps li,.scope,.table-box,.sector,.post-list,.empty,.form{border-radius:14px}
+.steps li,.card{border-color:var(--line)}
+th{background:#EEF3FB}
+.sector-featured{background:#F2F7FF}
+/* 목록: 본사 체크리스트처럼 회색 줄 + 파란 체크 */
+.scope ul{list-style:none;padding:0 0 20px;gap:8px}
+.scope li{position:relative;background:#F5F6F8;border-radius:10px;padding:10px 14px 10px 40px}
+.scope li::before{content:"";position:absolute;left:15px;top:50%;width:10px;height:6px;border-left:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:translateY(-70%) rotate(-45deg)}
+/* 문의 영역·안내 박스: 본사 남색 띠 */
+.contact,.cta,.consult-box{background:var(--navy)}
+.tab{border-color:var(--line)}
+.post-list a:hover{background:#F5F8FD}
+.cat{border-radius:4px;background:var(--blue-tint)}
+.site-footer{background:#F7F8FA;border-top:1px solid var(--line-2)}
+/* 휴대폰: 본사처럼 오른쪽 위 메뉴 버튼 */
+.menu-btn{display:none}
+@media (max-width:900px){
+  .header-inner{flex-wrap:nowrap;position:relative}
+  .brand-sub{display:none}
+  .brand-logo{height:34px;width:auto}
+  .menu-btn{display:flex;flex-direction:column;justify-content:center;gap:7px;width:44px;height:44px;padding:8px 6px;background:none;border:0;cursor:pointer;margin-left:auto}
+  .menu-btn span{display:block;height:2.5px;background:var(--navy);border-radius:2px}
+  .menu-btn span:nth-child(2){margin-left:10px}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;z-index:40;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(4,48,111,.08);padding:8px 24px 20px}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line-2);font-size:17px}
+  .nav a.btn{margin-top:14px;border-bottom:0;justify-content:center;padding:14px 22px}
+}
