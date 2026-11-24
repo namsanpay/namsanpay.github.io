@@ -2,6 +2,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
+  // IndexNow(빙·네이버 색인 알림) 인증 키 파일
+  eleventyConfig.addPassthroughCopy({ "src/47c7c3834c9dc3a29c446253bb64f51b.txt": "47c7c3834c9dc3a29c446253bb64f51b.txt" });
   eleventyConfig.ignores.add("src/posts/_*.md");
   eleventyConfig.addFilter("won", (n) => Number(n).toLocaleString("ko-KR") + "원");
   eleventyConfig.addFilter("head", (arr, n) => (arr || []).slice(0, n));
