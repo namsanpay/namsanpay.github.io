@@ -6,6 +6,8 @@ export default function (eleventyConfig) {
   // IndexNow(빙·네이버 색인 알림) 인증 키 파일
   eleventyConfig.addPassthroughCopy({ "src/47c7c3834c9dc3a29c446253bb64f51b.txt": "47c7c3834c9dc3a29c446253bb64f51b.txt" });
   eleventyConfig.ignores.add("src/posts/_*.md");
+  // 배포할 때마다 디자인 파일 주소를 바꿔 브라우저가 옛 파일을 쓰지 않게 함
+  eleventyConfig.addGlobalData("buildVer", () => Date.now().toString(36));
   eleventyConfig.addFilter("won", (n) => Number(n).toLocaleString("ko-KR") + "원");
   eleventyConfig.addFilter("head", (arr, n) => (arr || []).slice(0, n));
 
