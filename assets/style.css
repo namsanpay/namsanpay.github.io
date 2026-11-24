@@ -371,6 +371,6 @@ th{background:#EEF3FB}
 
 /* 2026-11-24 첫 화면 오른쪽 남산 스케치(흰 선, 다리 위에서 바라본 남산) — 이전 펜화는 brand/namsan-pen.svg에 보관 */
 .hero{position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:0;bottom:0;width:66%;height:96%;background:url(/assets/brand/namsan-bridge.svg) no-repeat right bottom/contain;pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 32%);mask-image:linear-gradient(to right,transparent 0,#000 32%)}
+.hero::after{content:"";position:absolute;right:0;bottom:0;width:44%;height:72%;max-width:640px;background:url(/assets/brand/namsan-bridge.svg) no-repeat right bottom/contain;pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 18%);mask-image:linear-gradient(to right,transparent 0,#000 18%)}
 .hero-inner{position:relative;z-index:1}
 @media (max-width:900px){.hero::after{display:none}}
