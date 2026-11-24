@@ -368,3 +368,9 @@ th{background:#EEF3FB}
 .perk-foot{margin:16px 0 0;font-size:14.5px;line-height:1.6;color:#44506a}
 .perk-foot strong{color:#0A5BD3;font-weight:700}
 @media (max-width:700px){.perk-box{padding:20px 18px 18px}.perk-items{grid-template-columns:1fr}.perk-title{font-size:19px}}
+
+/* 2026-11-24 첫 화면 오른쪽 남산 펜화(흰 선) — namsanhr.com 남산 이미지와 연결 */
+.hero{position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:0;bottom:0;width:66%;height:96%;background:url(/assets/brand/namsan-pen.svg) no-repeat right bottom/contain;pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 32%);mask-image:linear-gradient(to right,transparent 0,#000 32%)}
+.hero-inner{position:relative;z-index:1}
+@media (max-width:900px){.hero::after{display:none}}
