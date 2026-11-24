@@ -330,3 +330,13 @@ th{background:#EEF3FB}
   .nav a{padding:14px 0;border-bottom:1px solid var(--line-2);font-size:17px}
   .nav a.btn{margin-top:14px;border-bottom:0;justify-content:center;padding:14px 22px}
 }
+/* 로고: 본사 南山 마크 + 남산PAY (2026-11-24) */
+.brand{gap:10px;align-items:center}
+.brand-mark{display:block;width:44px;height:auto;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-tiny{font-size:9.5px;letter-spacing:.06em;color:#6B7280;font-weight:600;margin-bottom:4px}
+.brand-word{font-size:28px;font-weight:800;letter-spacing:-.03em;color:#2162AF}
+.brand-word span{color:#3A3F47;margin-left:1px}
+.brand .brand-sub{font-size:13px;color:var(--muted);padding-left:12px;border-left:1px solid var(--line);line-height:1.3;align-self:center}
+.footer-brand{margin:0 0 12px}
+@media (max-width:900px){.brand-mark{width:38px}.brand-word{font-size:24px}.brand-tiny{font-size:8.5px}}
