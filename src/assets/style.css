@@ -354,3 +354,17 @@ th{background:#EEF3FB}
 @media (max-width:900px){.brand-ko{font-size:11px}.brand-pay{font-size:21px}}
 .brand-ko{font-size:13px;letter-spacing:.02em}
 @media (max-width:900px){.brand-ko{font-size:11.5px}}
+
+/* 2026-11-24 아웃소싱 고객 혜택 상자(노무자문·노동사건 할인) */
+.perk-box{margin-top:36px;padding:28px 28px 24px;border-radius:20px;background:linear-gradient(135deg,#0A5BD3 0%,#0047B8 100%);color:#fff;box-shadow:0 10px 28px rgba(10,91,211,.18)}
+.perk-chip{display:inline-block;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.18);font-size:13px;font-weight:700;letter-spacing:.01em}
+.perk-title{margin:12px 0 18px;font-size:22px;font-weight:800;line-height:1.35;color:#fff}
+.perk-title em{font-style:normal;color:#FFE27A}
+.perk-items{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.perk-item{background:#fff;color:#1d2433;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.perk-item strong{color:#0A5BD3;font-size:16px;font-weight:800}
+.perk-item strong::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#0A5BD3;margin-right:8px;vertical-align:middle}
+.perk-item span{font-size:14.5px;line-height:1.55;color:#44506a}
+.perk-foot{margin:16px 0 0;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.92)}
+.perk-foot strong{color:#FFE27A;font-weight:700}
+@media (max-width:700px){.perk-box{padding:22px 18px 20px}.perk-items{grid-template-columns:1fr}.perk-title{font-size:19px}}
