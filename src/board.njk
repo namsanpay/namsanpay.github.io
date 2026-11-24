@@ -20,7 +20,6 @@ permalink: /board/
       <a href="{{ post.url }}">
         <span class="cat">{{ post.data.category }}</span>
         <span class="post-title">{{ post.data.title }}</span>
-        <time datetime="{{ post.date | iso }}">{{ post.date | ymd }}</time>
       </a>
     </li>
     {% endfor %}

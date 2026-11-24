@@ -262,7 +262,6 @@ layout: base.njk
     <a class="card card-link" href="{{ post.url }}">
       <span class="cat">{{ post.data.category }}</span>
       <strong class="card-title">{{ post.data.title }}</strong>
-      <time datetime="{{ post.date | iso }}">{{ post.date | ymd }}</time>
     </a>
     {% endfor %}
   </div>

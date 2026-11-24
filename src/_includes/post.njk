@@ -6,7 +6,7 @@ layout: base.njk
   <a class="back" href="/board/">← 목록으로</a>
   <p><a class="cat" href="/board/?cat={{ category | urlencode }}">{{ category }}</a></p>
   <h1>{{ title }}</h1>
-  <p class="meta"><time datetime="{{ page.date | iso }}">{{ page.date | ymd }}</time>{% if author %} · {{ author }}{% endif %}</p>
+  {% if author %}<p class="meta">{{ author }}</p>{% endif %}
   <div class="prose">
     {{ content | safe }}
   </div>
